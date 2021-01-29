@@ -1,4 +1,4 @@
-class fecha():
+class Fecha():
     
     def __init__(self,dia, mes, año):
         self.dia = dia
@@ -34,10 +34,10 @@ class fecha():
         return str(self.dia) + "/" + str(self.mes) + "/" + str(self.año)
 
 """class Main():
-    fecha1 = fecha(1,3,2017)
-    fecha2 = fecha(29,2,2018)
-    fecha3 = fecha(14,3,2017)
-    fecha4 = fecha(1,3,2017)
+    fecha1 = Fecha(1,3,2017)
+    fecha2 = Fecha(29,2,2018)
+    fecha3 = Fecha(14,3,2017)
+    fecha4 = Fecha(1,3,2017)
 
     print(fecha1.dia)
     print(fecha1.mes)
