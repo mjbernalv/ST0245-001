@@ -1,6 +1,8 @@
 import sys
 from time import time
 import random
+import  matplotlib.pyplot as plt
+
 
 def groupSum_aux(list, start, target):
     if start>= len(list):
@@ -29,3 +31,9 @@ for i in range(5,26, 1):
     total = fin-inicio
     times.append(total)
     print("El tiempo total con ", i,  " es: ", total, " ms")
+    
+plt.plot(range(5,26),times)
+plt.xlabel("Dimensión (n)")
+plt.ylabel("Tiempo de ejecución (ms)")
+plt.title("Complejidad del algoritmo: Group Sum")
+plt.show()

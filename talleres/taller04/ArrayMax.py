@@ -1,7 +1,7 @@
 import sys
 from time import time
 import random
-#import  matplotlib.pyplot as plt
+import  matplotlib.pyplot as plt
 
 def arrayMax(arr):
     return arrayMax_aux(arr, 0, 0)
@@ -32,3 +32,9 @@ for i in range(100,10000,500):
     total = fin-inicio
     times.append(total)
     print("El tiempo total con ", i,  " es: ", total, " ms")
+    
+plt.plot(range(1,9600,500),times,label="ArrayMax")
+plt.xlabel("Dimensión (n)")
+plt.ylabel("Tiempo de ejecución (ms)")
+plt.title("Complejidad del algoritmo: Array Max")
+plt.show()
