@@ -22,6 +22,7 @@ def createArray(length):
 
 sys.setrecursionlimit(2000000000)
 
+#Tomar tiempos
 times =[]
 for i in range(5,26, 1):
     array = createArray(i)
@@ -31,7 +32,8 @@ for i in range(5,26, 1):
     total = fin-inicio
     times.append(total)
     print("El tiempo total con ", i,  " es: ", total, " ms")
-    
+   
+#Graficar tiempos
 plt.plot(range(5,26),times)
 plt.xlabel("Dimensión (n)")
 plt.ylabel("Tiempo de ejecución (ms)")

@@ -23,6 +23,7 @@ sys.setrecursionlimit(2000000)
 
 print(arrayMax([12,342,255,542,23]))
 
+#Tomar tiempos
 times =[]
 for i in range(100,10000,500):
     array = createArray(i)
@@ -32,7 +33,8 @@ for i in range(100,10000,500):
     total = fin-inicio
     times.append(total)
     print("El tiempo total con ", i,  " es: ", total, " ms")
-    
+   
+#Graficar tiempos
 plt.plot(range(1,9600,500),times,label="ArrayMax")
 plt.xlabel("Dimensión (n)")
 plt.ylabel("Tiempo de ejecución (ms)")
