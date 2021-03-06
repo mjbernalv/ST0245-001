@@ -25,7 +25,7 @@ class ArrayList:
               new[i] = self.elements[i]  # O(n)
            self.elements = new
         else:
-            self.elements[self.size] = object                                               # - - > C10
+            self.elements[self.size] = object            
         self.size = self.size + 1  
         # Complejidad en el peor caso: O(n) (cuando el arreglo está lleno)
  
