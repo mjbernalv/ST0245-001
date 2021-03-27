@@ -107,12 +107,12 @@ def Distribuir(almacen, solicitudes):
         temp = temp + curr.getName() + ", ["
         for m in range(curr.getNum()):
             if neveras.getSize()==0:
-                temp = temp + " No hay más neveras disponibles  "
+                temp = temp + " No hay más neveras disponibles "
                 break
             else:
                 nev = neveras.pop()
                 temp = temp + nev.toString() + ","
-        temp = temp[:len(temp)-2] + "])"
+        temp = temp[:len(temp)-1] + "])"
         array.append(temp)
     
     return array
