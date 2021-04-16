@@ -14,7 +14,7 @@ class BinaryTreeMM():
     def search(self, element):
         return self.__searchAux(self.root, element)
    
-    def __searchAux(self, node, element):
+    def __searchAux(self, node, element): #Complexity worst case: T(n)= T(n/2)+T(n/2)+c --> O(n) n=size of the tree
         if node == None:
             return False
         if element == node.data:
@@ -31,7 +31,7 @@ class BinaryTreeMM():
         else:
             self.__addAux(data, self.root)
 
-    def __addAux(self, data, actual):
+    def __addAux(self, data, actual): #Complexity worst case: T(n)= T(n/2)+T(n/2)+c --> O(n) n=size of the tree
         new = Node(data)
         if data<actual.data:
             if actual.left == None:
@@ -56,7 +56,7 @@ class BinaryTreeMM():
     def draw(self):
         return f'digraph G {"{"} \n {self.__drawAux(self.root)} \n{"}"}'
     
-    def __drawAux(self, actual):
+    def __drawAux(self, actual): #Complexity worst case: T(n)=T(n/2)+T(n/2)+c --> O(n) n=size of the tree
         if actual == None:
             return
         if actual.left != None and actual.right!=None:
