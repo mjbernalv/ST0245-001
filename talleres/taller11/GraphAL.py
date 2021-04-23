@@ -6,6 +6,7 @@ class GraphAL():
 
     def addArc(self, vertex, edge, weight):
         self.list[vertex].append((edge, weight))
+        self.size+=1
 
     def getSuccessors(self, vertex):
         sucessors = []
