@@ -11,13 +11,12 @@ class GraphAM():
 
     def addArc(self, source, destination, weight):
         self.graph[source][destination] = weight
-        self.size+=1
 
     def getSuccessors(self, vertex):
         sucessors = []
         for i in range(len(self.graph[vertex])):
             if self.graph[vertex][i]!=0:
-                sucessors.append(self.graph[vertex][i])
+                sucessors.append(i)
         return sucessors
 
     def __str__(self):
@@ -28,7 +27,6 @@ graph = GraphAM(3)
 graph.addArc(0, 1 , 15)
 graph.addArc(0, 2 , 30)
 graph.addArc(1, 1 , 7)
-graph.addArc(2, 0, 12)
-print(graph.__str__())
+print(graph)
 print(graph.getSuccessors(0))
 print(graph.getWeight(1, 1))
