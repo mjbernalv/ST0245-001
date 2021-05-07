@@ -4,6 +4,7 @@ class Bees():
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
+        self.sector = None
 
     def __str__(self):
         return f'{[ self.latitude, self.longitude, self.altitude ]}'

@@ -32,7 +32,20 @@ class Reader():
             currZ = float(column[2])
 
             self.addBee(currX, currY, currZ)
-        
+
+        self.mins = [self.minX, self.minY, self.minZ] 
+        midX = (self.minX - self.maxX)/2
+        midY = (self.maxY - self.minY)/2
+        midZ = (self.maxZ - self.minZ)/2
+
+        #ph = math.sqrt(math.pow(midX*111325, 2)+math.pow(midY*111325,2))
+        #diagonal = math.sqrt(math.pow(ph, 2)+math.pow(midZ, 2))
+
+        print("")
+        print("The bees that are in danger of colliding are:")
+
+        octree = Octree()
+        octree.octree(self.bees, self.mins, midX, midY, midZ)
 
     def addBee(self, currX, currY, currZ):
         if currX > self.maxX:
@@ -52,13 +65,6 @@ class Reader():
         self.bees.append(bee)
         print(bee.__str__())
 
-    def getCollisions(self, midX, midY, midZ, diagonal):
-        if diagonal > 100:
-            octree = Octree()
-            octree.octree(self.bees, self.mins, midX, midY, midZ)
-        else:
-            self.collisions()
-
-    def collisions(self):
+    '''def collisions(self):
         for bee in self.bees:
-            print("[" , bee.latitude, ", ", bee.longitude, ", ", bee.altitude , "]")
+            print("[" , bee.latitude, ", ", bee.longitude, ", ", bee.altitude , "]")'''
