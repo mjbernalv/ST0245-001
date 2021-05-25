@@ -1,0 +1,58 @@
+Nearest Neighbor
+
+def loadCSV(path, pictures):
+    """ Read images as a CSV file and returns an array containing all the images in arrays.
+    :type path: string
+    :param path: contains the path of the location of the images
+    
+    :type pictures: list
+    :param pictures: contains the names of the pictures
+    
+    :raises: path not found exception
+    
+    :rtype: numpy array
+    """
+
+def compress(image, ratio):
+    """ Compresses image using Nearest neighbor algorithm and returns the compressed image as a matrix.
+    :type image: numpy array (matrix)
+    :param image: matrix containing the original image
+    
+    :type ratio: integer
+    :param ratio: describes how much the image wants to be compressed
+        
+    :rtype: numpy array (matrix)
+    """
+
+def decompress(image, ratio):
+    """ Decompresses image using Nearest Neighbor algorithm and returns the decompressed image as a matrix.
+    :type image: numpy array (matrix)
+    :param image: matrix containing the compressed image
+    
+    :type ratio: integer
+    :param ratio: describes how much the image wants to be decompressed
+        
+    :rtype: numpy array (matrix)
+    """
+
+def saveCSV(path, image, name):
+    """ Saves an image from a numpy array (matrix) to a csv file.
+    :type path: string
+    :param path: contains the path where the image is going to be saved
+    
+    :type image: numpy array (matrix)
+    :param image: contains the image represented in a numpy array
+    
+    :type name: string
+    :param name: contains the new file name of the image
+        
+    :rtype: None
+    """
+
+def showImage(image):
+    """ Shows a plot of the image from a numpy array (matrix)
+    :type image: numpy array
+    :param image: represents the image as an array (matrix)
+        
+    :rtype: None
+    """

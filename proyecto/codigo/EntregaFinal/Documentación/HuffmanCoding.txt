@@ -1,0 +1,158 @@
+Huffman coding
+
+class HuffmanCoding():
+	""" This class is in charge of compression and decompression of images using 
+	the Huffman Coding algorithm.	"""
+
+	def __init__(self, path):
+		""" This constructor initializes the process of compression and decompression of an image.		
+		:type path: string
+		:param path: contains the path of the image
+				
+		:rtype: None
+		"""
+
+	class HeapNode():
+		""" This class is in charge of creating the nodes to build the Huffman tree by using heap queue.	"""
+		
+
+		def __init__(self, pixel, frequency):
+			""" This constructure initializes each node of the tree.		
+			:type pixel: integer
+			:param pixel: is the value of each pixel in the image
+			
+			:type frequency: integer
+			:param frequency: says how much a certain pixel is repeated in the image
+						
+			:rtype: None
+			"""
+		
+		def __lt__(self, other):
+			""" This method defines the less than function.
+			:type other: HeapNode
+			:param other: the other node that will be compared with the current one
+						
+			:rtype: Boolean
+			"""
+
+		def __eq__(self, other):
+			""" This method defines the equal to function.
+			:type other: HeapNode
+			:param other: the other node that will be compared with the current one
+						
+			:rtype: Boolean
+			"""
+
+	def compress(self, filename):
+		""" This method is in charge of compression using Huffman coding.	
+		:type filename: string
+		:param filename: contains the path of the file that is going to be compressed
+		
+		:raises: file not found exception
+		
+		:rtype: string with the compressed file name
+		"""
+
+	def __frequencyDict(self, file):
+		""" Creates a hash tables with all the frequencies for each pixel in the image
+		:type file: string
+		:param file: contains the file that is being read
+				
+		:rtype: Hash table (dictionary)
+		"""
+
+	def __makeHeap(self, frequency):
+		""" Creates a HeapNode for each pixel in the image with its corresponding frequency.		
+		:type frequency: Hash table
+		:param frequency: contains the frequencies of each pixel in the image
+				
+		:rtype: None
+		"""
+
+	def __makeTree(self):
+		""" Creates Huffman tree with each of the nodes
+
+		:rtype: None
+		"""
+
+	def __createCodes(self):
+		""" Codes each leaf of the tree (pixel in the image)
+		
+		:rtype: None
+		"""
+
+	def __createCodesAux(self, root, current):
+		""" Helps coding each leaf of the tree (pixel in the image)
+
+		:type root: HeapNode
+		:param root: is the root of the Huffman Tree
+
+		:type current: Heapnode
+		:param current: is the current node of the tree that is being used
+
+		:rtype: None
+		"""
+
+	def __getEncodedFile(self, file):
+		""" Encodes the image
+		:type file: string
+		:param file: contains the file that is going to be enconded
+				
+		:rtype: string
+		"""
+
+	def __padEncodedFile(self, encoded):
+		""" Pads the pixels that have a code that is not a multiple of 8.	
+		:type encoded: string
+		:param encoded: contains the enconded image
+				
+		:rtype: string
+		"""
+
+	def __byteArray(self, paddedFile):
+		""" Creates a byte array with the padded file.
+		
+		:type paddedFile: string
+		:param paddedFile: contains the padded file
+		
+		:raises: file not padded properly exception
+		
+		:rtype: byte array
+		"""
+
+	def decompress(self, filename):
+		""" This method is in charge of decompression using Huffman coding.	
+		
+		:type filename: string
+		:param filename: contains the path of the compressed image that is going to be decompressed.
+		
+		:raises: file not found exception
+		
+		:rtype: string with the decompressed file name
+		"""
+
+	def __removePadding(self, encoded):
+		""" Removes the padding of the encoded file		
+		:type encoded: string
+		:param encoded: contains the padded encoded file
+				
+		:rtype: string
+		"""
+
+	def __decodeFile(self, encoded):
+		""" Decodes the encoded file	
+		:type encoded: string
+		:param encoded: contains the encoded file
+				
+		:rtype: string
+		"""
+
+	def showImage(self, path):
+		""" Shows a plot of the image from a csv file
+		:type path: string
+		:param path: represents the image in a csv file
+		
+		:raises: file not found exception
+		
+		:rtype: None
+		"""
